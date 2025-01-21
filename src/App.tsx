@@ -1,26 +1,24 @@
-import { useState } from 'react'
-import viteLogo from '/vite.svg'
+import sunhub from './assets/sunhubbr_logo.jpg'
 import './App.css'
 import ButtonTemplate from './components/ButtonTemplate'
 import InputTemplate from './components/InputTemplate'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Sunhub" />
-        </a>
+          <img src={sunhub} className="logo" alt="Sunhub" />
        </div>
-      <h1>Lead Picker</h1>
+      <h1 className='Title'>Lead Picker</h1>
       <div>
-        <InputTemplate name='Login' PlaceHolder='Insira Seu Email'/>
-        <InputTemplate name='Senha' PlaceHolder='Insira Sua Senha'/>
+        <div className='inputLine'>
+        <InputTemplate name='Login' type="email" placeholder='Insira Seu Email'/>
+        <InputTemplate name='Senha' type="password" placeholder='Insira Sua Senha'/>
+        </div>
         <ButtonTemplate name='Login'/>
       </div>
-      <p className="read-the-docs">
-        Não Possui uma conta? <a>Registre-se</a>
+      <p className="greyText">
+        Não Possui uma conta? <a className='register'>Registre-se</a>
       </p>
     </>
   )

@@ -1,0 +1,23 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  } 
+
+  .greyText {
+    color: #888;
+  }
+ 
+  .Title{
+    margin-right: 3px;
+    margin-top: 15px;
+  }
+  
+  .inputLine{
+    margin-top: 2px;
+  }
+  
+  .register{
+    color: rgb(255, 118, 39);
+  }

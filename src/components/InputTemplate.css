@@ -2,20 +2,21 @@
   .input{
     appearance: none;
     height: 32px;
-    border: 2px solid rgba(55, 53, 214, 0.5);
+    border: 2px solid rgb(255, 118, 39, 0.5);
     border-radius: 8px;
     font-size: 16px;
     padding-left: 16px;
     padding-right: 16px;
-    color: rgba(55, 53, 214, 0.5);
+    color: rgb(146, 146, 146);
     transition-property: border, color;
     transition-duration: 400ms;
     position: relative;
     width: 320px;
   }
-  .input :focus {
-    border: 1px solid rgba(55, 53, 214, 1);
-    color: rgba(55, 53, 214, 1);
+  .input:focus {
+    border: 1px solid rgb(255, 29, 29);
+    color: rgb(255, 118, 39);
+    outline: none;
   }
   
 
