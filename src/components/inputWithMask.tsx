@@ -1,22 +1,21 @@
-import React, { ChangeEvent } from "react";
+import React,  { useRef }  from "react";
 import "./InputTemplate.css"
 import { InputMask } from '@react-input/mask';
 
 interface InputProps{
+    id?: string;
     name?: string;
     placeholder: string;
-    IsPhoneNumber?: boolean;
-    onChange?:  (event: ChangeEvent<HTMLInputElement>) => void;
-    value?: string;
-}
+    mask: string;
+    value?: string;  
+    onChange?: React.ChangeEventHandler<HTMLInputElement>;
+ }
 
 function MaskInput(props: InputProps){
         return (
         <div>
         <p className="p">{props.name}</p>
-        {props.IsPhoneNumber ? <InputMask onChange={props.onChange} value={props.value} className="input" mask="(__) _____-____" replacement={{ _: /\d/ }} placeholder={props.placeholder}/> 
-                             : <InputMask className="input" mask="___.___.___-__" replacement={{ _: /\d/ }} placeholder={props.placeholder}/>
-        }
+        <InputMask onChange={props.onChange} id={props.id} value={props.value} className="input" mask={props.mask} replacement={{ _: /\d/ }} placeholder={props.placeholder}/>
         </div>
     )
 }
