@@ -1,0 +1,27 @@
+
+  .input{
+    appearance: none;
+    height: 32px;
+    border: 2px solid rgba(55, 53, 214, 0.5);
+    border-radius: 8px;
+    font-size: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: rgba(55, 53, 214, 0.5);
+    transition-property: border, color;
+    transition-duration: 400ms;
+    position: relative;
+    width: 320px;
+  }
+  .input :focus {
+    border: 1px solid rgba(55, 53, 214, 1);
+    color: rgba(55, 53, 214, 1);
+  }
+  
+
+.p{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 3px;
+}
