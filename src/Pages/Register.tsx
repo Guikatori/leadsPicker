@@ -4,6 +4,7 @@ import ButtonTemplate from '../components/ButtonTemplate';
 import InputTemplate from '../components/InputTemplate';
 import MaskInput from '../components/inputWithMask';  
 import map from '../assets/4710388-mapa-do-brasil-sobre-fundo-branco-gratis-vetor.jpg'
+import axios from "axios";
 
 function RegisterPage() {
   const [name, setName] = useState('');
@@ -12,7 +13,7 @@ function RegisterPage() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const formData = {
       name,
       email,
@@ -24,7 +25,10 @@ function RegisterPage() {
     if(password !== confirmPassword){
       alert("As senhas não Correspondem")
     }if(password === confirmPassword){
-      console.log(formData);
+      const response = await axios.post("http://localhost:3000/add-user", formData)
+      if(response.status){
+        console.log(response)
+      }
     }
   };
 

@@ -8,6 +8,7 @@ interface InputProps{
     type: string;
     value?: string;  
     onChange?: React.ChangeEventHandler<HTMLInputElement>;
+    required?: string;
 }
 
 const InputTemplate = (props: InputProps) => {
